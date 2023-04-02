@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:weatherdb
+    password: 262835Gg.
+    username: guner
+  jackson:
+    serialization:
+      fail-on-empty-beans:  false
+  config:
+    import: optional:file:.env[.properties]
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+resilience4j:
+  ratelimiter:
+    instances:
+      basic:
+        limit-for-period: 10
+        limit-refresh-period: 1m
+        timeout-duration: 10s
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+          - prometheus
+weather-stack:
+  api-url: http://api.weatherstack.com/current
+  api-key: a644df5c96efa49fecadb6e558643e79
+  api-call-limit: 30
+  cache-name: weathers
+  cache-ttl: 10000
