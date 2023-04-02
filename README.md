@@ -18,25 +18,37 @@ On the swagger page you can find the relevant api endpoint. You can reach the op
 You can define WEATHER_STACK_API_KEY in the .env file
 
 Technologies
+
 Java 17
+
 Spring Boot 3.0
+
 Open API Documentation
+
 Spring Data JPA
-Kotlin
+
 H2 In Memory Database
+
 Restful API
+
 Maven
-Junit5
-Mockito
-Integration Tests
+
 Docker
+
 Docker Compose
+
 Github Actions
+
 Prometheus
+
 Grafana
+
 Prerequisites
+
 Maven or Docker
+
 Docker Run
+
 The application can be built and run by the Docker engine. The Dockerfile has multistage build, so you do not need to build and run separately.
 
 Please follow the below directions in order to build and run the application with Docker Compose;
